@@ -1,0 +1,99 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:17:1-53:12
+INJECTED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:17:1-53:12
+INJECTED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:17:1-53:12
+INJECTED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:17:1-53:12
+INJECTED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:17:1-53:12
+INJECTED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:17:1-53:12
+INJECTED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:17:1-53:12
+	package
+		ADDED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:19:5-44
+		INJECTED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml
+	android:versionName
+		ADDED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:21:5-30
+		INJECTED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:18:5-51
+	xmlns:android
+		ADDED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:17:11-69
+	android:versionCode
+		ADDED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:20:5-28
+		INJECTED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.WAKE_LOCK
+ADDED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:23:5-67
+	android:name
+		ADDED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:23:22-65
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:24:5-80
+	android:name
+		ADDED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:24:22-78
+uses-permission#android.permission.INTERNET
+ADDED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:25:5-67
+	android:name
+		ADDED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:25:22-64
+application
+ADDED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:27:5-51:19
+	android:label
+		ADDED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:27:18-50
+	tools:ignore
+		ADDED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:30:9-48
+	android:icon
+		ADDED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:28:9-45
+	android:theme
+		ADDED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:29:9-44
+activity#com.example.android.scheduler.MainActivity
+ADDED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:32:9-40:20
+	android:label
+		ADDED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:33:13-45
+	android:uiOptions
+		ADDED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:34:13-57
+	android:name
+		ADDED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:32:19-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:36:13-39:29
+action#android.intent.action.MAIN
+ADDED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:37:17-69
+	android:name
+		ADDED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:37:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:38:17-77
+	android:name
+		ADDED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:38:27-74
+receiver#com.example.android.scheduler.SampleAlarmReceiver
+ADDED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:42:9-56
+	android:name
+		ADDED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:42:19-54
+receiver#com.example.android.scheduler.SampleBootReceiver
+ADDED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:44:9-49:20
+	android:enabled
+		ADDED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:45:17-40
+	android:name
+		ADDED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:44:19-53
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED
+ADDED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:46:13-48:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:47:13-74
+	android:name
+		ADDED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:47:21-72
+service#com.example.android.scheduler.SampleSchedulingService
+ADDED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:50:9-60
+	android:name
+		ADDED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:50:18-57
+uses-sdk
+INJECTED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml
+INJECTED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml
+INJECTED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml
+INJECTED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml
+		ADDED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml
+		ADDED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml

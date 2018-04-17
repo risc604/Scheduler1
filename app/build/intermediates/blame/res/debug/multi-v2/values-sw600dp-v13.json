@@ -1,0 +1,28 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Volumes/WD1TB/Git_Repository/Scheduler1/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml",
+            "map": [
+                {
+                    "source": "/Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/res/values-sw600dp/styles.xml",
+                    "from": {
+                        "startLines": "18",
+                        "startColumns": "4",
+                        "startOffsets": "621",
+                        "endLines": "25",
+                        "endColumns": "12",
+                        "endOffsets": "1084"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "9",
+                        "endColumns": "12",
+                        "endOffsets": "518"
+                    }
+                }
+            ]
+        }
+    ]
+}

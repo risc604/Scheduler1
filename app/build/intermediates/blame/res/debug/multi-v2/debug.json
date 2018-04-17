@@ -1,0 +1,110 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Volumes/WD1TB/Git_Repository/Scheduler1/app/build/intermediates/res/merged/debug/values_values.arsc.flat",
+            "map": [
+                {
+                    "source": "/Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/res/values/dimens.xml",
+                    "from": {
+                        "startLines": "24,23,22,21,20",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "880,836,791,748,706",
+                        "endColumns": "42,43,44,42,41",
+                        "endOffsets": "918,875,831,786,743"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "55,98,142,187,230",
+                        "endColumns": "42,43,44,42,41",
+                        "endOffsets": "93,137,182,225,267"
+                    }
+                },
+                {
+                    "source": "/Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "17,27,31,28,29,18,30,26",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "620,1322,1565,1375,1429,667,1503,1271",
+                        "endLines": "17,27,31,28,29,25,30,26",
+                        "endColumns": "46,52,62,53,73,26,61,50",
+                        "endOffsets": "662,1370,1623,1424,1498,1266,1560,1317"
+                    },
+                    "to": {
+                        "startLines": "7,8,9,10,11,12,20,21",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "272,319,372,435,489,563,1167,1229",
+                        "endLines": "7,8,9,10,11,19,20,21",
+                        "endColumns": "46,52,62,53,73,26,61,50",
+                        "endOffsets": "314,367,430,484,558,1162,1224,1275"
+                    }
+                },
+                {
+                    "source": "/Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/res/values/styles.xml",
+                    "from": {
+                        "startLines": "20,22,26,28",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "651,713,797,826",
+                        "endLines": "20,22,26,32",
+                        "endColumns": "60,53,27,12",
+                        "endOffsets": "707,762,820,1081"
+                    },
+                    "to": {
+                        "startLines": "22,23,24,25",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "1280,1340,1393,1420",
+                        "endLines": "22,23,24,29",
+                        "endColumns": "59,52,26,12",
+                        "endOffsets": "1335,1388,1415,1675"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Volumes/WD1TB/Git_Repository/Scheduler1/app/build/intermediates/res/merged/debug/values-v11_values-v11.arsc.flat",
+            "map": [
+                {
+                    "source": "/Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/res/values-v11/styles.xml",
+                    "from": {
+                        "startLines": "17",
+                        "startColumns": "4",
+                        "startOffsets": "620",
+                        "endColumns": "65",
+                        "endOffsets": "681"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "64",
+                        "endOffsets": "115"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Volumes/WD1TB/Git_Repository/Scheduler1/app/build/intermediates/res/merged/debug/values-sw600dp-v13_values-sw600dp-v13.arsc.flat",
+            "map": [
+                {
+                    "source": "/Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/res/values-sw600dp/styles.xml",
+                    "from": {
+                        "startLines": "18",
+                        "startColumns": "4",
+                        "startOffsets": "621",
+                        "endLines": "25",
+                        "endColumns": "12",
+                        "endOffsets": "1084"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "9",
+                        "endColumns": "12",
+                        "endOffsets": "518"
+                    }
+                }
+            ]
+        }
+    ]
+}
