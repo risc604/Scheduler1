@@ -23,6 +23,7 @@ import java.net.URL;
  * wake lock.
  */
 public class SampleSchedulingService extends IntentService {
+    private static final String TAG1 = SampleSchedulingService.class.getSimpleName();
     public SampleSchedulingService() {
         super("SchedulingService");
     }
@@ -42,6 +43,7 @@ public class SampleSchedulingService extends IntentService {
 
     @Override
     protected void onHandleIntent(Intent intent) {
+        Log.w(TAG1, "onHandleIntent(), ");
         // BEGIN_INCLUDE(service_onhandle)
         // The URL from which to fetch content.
         String urlString = URL;
@@ -71,6 +73,7 @@ public class SampleSchedulingService extends IntentService {
     
     // Post a notification indicating whether a doodle was found.
     private void sendNotification(String msg) {
+        Log.w(TAG1, " sendNotification(), msg: " + msg);
         mNotificationManager = (NotificationManager)
                this.getSystemService(Context.NOTIFICATION_SERVICE);
     
@@ -95,6 +98,7 @@ public class SampleSchedulingService extends IntentService {
 //
     /** Given a URL string, initiate a fetch operation. */
     private String loadFromNetwork(String urlString) throws IOException {
+        Log.w(TAG1, "loadFromNetwork(), urlString: " + urlString);
         InputStream stream = null;
         String str ="";
       
@@ -117,6 +121,7 @@ public class SampleSchedulingService extends IntentService {
      * @throws IOException
      */
     private InputStream downloadUrl(String urlString) throws IOException {
+        Log.w(TAG1, "downloadUrl(), urlString: " + urlString);
     
         URL url = new URL(urlString);
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -137,6 +142,7 @@ public class SampleSchedulingService extends IntentService {
      * @throws IOException
      */
     private String readIt(InputStream stream) throws IOException {
+        Log.w(TAG1, " readIt(), ");
       
         StringBuilder builder = new StringBuilder();
         BufferedReader reader = new BufferedReader(new InputStreamReader(stream));

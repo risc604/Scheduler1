@@ -4,6 +4,17 @@ ADDED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest
 INJECTED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:17:1-53:12
 INJECTED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:17:1-53:12
 INJECTED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:17:1-53:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/tomcat/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/0df357acf88a9d03b68bc12390ee250e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/tomcat/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/5128279c398a4c9b87e3d8b053b7d127/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/tomcat/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/c12d6188e6aa23e6cb58e0288f46c6d8/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/tomcat/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/3d31397e9ce7d804a4d05a80a1a9c349/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/tomcat/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/9ae05c05c8b42000aa0dcf955dc7b935/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/tomcat/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/0234cf7e7140b1ef82d8e7a0ebea1660/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] /Users/tomcat/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/12219b01cb5e1e591552032da18a5181/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/tomcat/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/67b5bc1539540f8a526035339be77076/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/tomcat/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/7e7621d5ff7ca8484edf69bee56cc9e0/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/tomcat/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/5f38cf24ed8bcb1c550b2eaa948c20d0/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] /Users/tomcat/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/64dbc10c501142a5c784316178516cae/AndroidManifest.xml:17:1-22:12
 INJECTED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:17:1-53:12
 INJECTED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:17:1-53:12
 INJECTED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml:17:1-53:12
@@ -87,6 +98,28 @@ uses-sdk
 INJECTED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml
 INJECTED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/tomcat/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/0df357acf88a9d03b68bc12390ee250e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/tomcat/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/0df357acf88a9d03b68bc12390ee250e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/tomcat/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/5128279c398a4c9b87e3d8b053b7d127/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/tomcat/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/5128279c398a4c9b87e3d8b053b7d127/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/tomcat/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/c12d6188e6aa23e6cb58e0288f46c6d8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/tomcat/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/c12d6188e6aa23e6cb58e0288f46c6d8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/tomcat/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/3d31397e9ce7d804a4d05a80a1a9c349/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/tomcat/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/3d31397e9ce7d804a4d05a80a1a9c349/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/tomcat/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/9ae05c05c8b42000aa0dcf955dc7b935/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/tomcat/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/9ae05c05c8b42000aa0dcf955dc7b935/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/tomcat/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/0234cf7e7140b1ef82d8e7a0ebea1660/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/tomcat/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/0234cf7e7140b1ef82d8e7a0ebea1660/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/tomcat/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/12219b01cb5e1e591552032da18a5181/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/tomcat/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/12219b01cb5e1e591552032da18a5181/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/tomcat/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/67b5bc1539540f8a526035339be77076/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/tomcat/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/67b5bc1539540f8a526035339be77076/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/tomcat/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/7e7621d5ff7ca8484edf69bee56cc9e0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/tomcat/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/7e7621d5ff7ca8484edf69bee56cc9e0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/tomcat/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/5f38cf24ed8bcb1c550b2eaa948c20d0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/tomcat/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/5f38cf24ed8bcb1c550b2eaa948c20d0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/tomcat/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/64dbc10c501142a5c784316178516cae/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/tomcat/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/64dbc10c501142a5c784316178516cae/AndroidManifest.xml:20:5-44
 INJECTED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml
 INJECTED from /Volumes/WD1TB/Git_Repository/Scheduler1/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion

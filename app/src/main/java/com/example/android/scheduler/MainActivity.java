@@ -18,9 +18,12 @@ package com.example.android.scheduler;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Environment;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import java.io.File;
 
 
 /**
@@ -32,18 +35,21 @@ import android.view.MenuItem;
  * that the page contains a custom doodle instead of the standard Google logo.
  */
 public class MainActivity extends Activity {
-    private
+    private static final String TAG = MainActivity.class.getSimpleName();
     SampleAlarmReceiver alarm = new SampleAlarmReceiver();
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Log.w(TAG, "");
+
+        logFileCreated();
+        Log.w(TAG, "onCreate(), ");
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        Log.w(TAG, "onCreateOptionsMenu(), menu: " + menu);
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
@@ -51,6 +57,7 @@ public class MainActivity extends Activity {
     // Menu options to set and cancel the alarm.
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        Log.w(TAG, "onOptionsItemSelected(), item: " + item);
         switch (item.getItemId()) {
             // When the user clicks START ALARM, set the alarm.
             case R.id.start_action:
@@ -63,4 +70,43 @@ public class MainActivity extends Activity {
         }
         return false;
     }
+
+    //private final static String mPID = String.valueOf(android.os.Process.myPid());
+    final static String mPID = String.valueOf(android.os.Process.myPid());
+    //final static String cmds01 = "logcat *:v *:w *:e *:d *:i | grep \"(" + mPID + ")\" -f ";
+    final static String cmds01 = "logcat *:v | grep \"(" + mPID + ")\" -f ";
+
+    public void logFileCreated()
+    {
+        try
+        {
+            //final String logFilePath = "/storage/emulated/0/Download/"+"Log_mt24.txt";
+            final String logFilePath =  Environment.getExternalStorageDirectory().getAbsolutePath() +
+                    "/Download/scheduler1.txt";
+            final String cmds00 = "logcat -d -f ";
+            //final String cmds01 = "logcat *:e *:i | grep \"(" + mPID + ")\"";
+
+            //String mPID = String.valueOf(android.os.Process.myPid());
+            //String cmds01 = "logcat *:e *:i | grep \"(" + mPID + ")\"";
+
+            File f = new File(logFilePath);
+            if (f.exists() && !f.isDirectory())
+            {
+                if (!f.delete())
+                {
+                    Log.w(TAG, "FAIL !! file delete NOT ok.");
+                }
+            }
+
+            java.lang.Process process = Runtime.getRuntime().exec(cmds01 + logFilePath);
+            Log.w(TAG, "logFileCreated(), process: " + process.toString() +
+                    ", path: " + logFilePath);
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+
 }

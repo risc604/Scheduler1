@@ -1,0 +1,4 @@
+#Tue Apr 17 17:19:03 CST 2018
+base.0=/Volumes/WD1TB/Git_Repository/Scheduler1/app/build/intermediates/transforms/dexMerger/debug/57
+path.0=classes.dex
+renamed.0=classes.dex

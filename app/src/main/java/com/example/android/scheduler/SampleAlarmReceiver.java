@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.v4.content.WakefulBroadcastReceiver;
+import android.util.Log;
 
 import java.util.Calendar;
 
@@ -15,13 +16,15 @@ import java.util.Calendar;
  * and then starts the IntentService {@code SampleSchedulingService} to do some work.
  */
 public class SampleAlarmReceiver extends WakefulBroadcastReceiver {
+    private static final String TAG = SampleAlarmReceiver.class.getSimpleName();
     // The app's AlarmManager, which provides access to the system alarm services.
     private AlarmManager alarmMgr;
     // The pending intent that is triggered when the alarm fires.
     private PendingIntent alarmIntent;
   
     @Override
-    public void onReceive(Context context, Intent intent) {   
+    public void onReceive(Context context, Intent intent) {
+        Log.w(TAG, "onReceive(), ");
         // BEGIN_INCLUDE(alarm_onreceive)
         /* 
          * If your receiver intent includes extras that need to be passed along to the
@@ -52,6 +55,7 @@ public class SampleAlarmReceiver extends WakefulBroadcastReceiver {
      * @param context
      */
     public void setAlarm(Context context) {
+        Log.w(TAG, " setAlarm(), ");
         alarmMgr = (AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
         Intent intent = new Intent(context, SampleAlarmReceiver.class);
         alarmIntent = PendingIntent.getBroadcast(context, 0, intent, 0);
@@ -59,8 +63,8 @@ public class SampleAlarmReceiver extends WakefulBroadcastReceiver {
         Calendar calendar = Calendar.getInstance();
         calendar.setTimeInMillis(System.currentTimeMillis());
         // Set the alarm's trigger time to 8:30 a.m.
-        calendar.set(Calendar.HOUR_OF_DAY, 8);
-        calendar.set(Calendar.MINUTE, 30);
+        calendar.set(Calendar.HOUR_OF_DAY, 17);
+        calendar.set(Calendar.MINUTE, 20);
   
         /* 
          * If you don't have precise time requirements, use an inexact repeating alarm
@@ -115,6 +119,7 @@ public class SampleAlarmReceiver extends WakefulBroadcastReceiver {
      */
     // BEGIN_INCLUDE(cancel_alarm)
     public void cancelAlarm(Context context) {
+        Log.w(TAG, " cancelAlarm(), ");
         // If the alarm has been set, cancel it.
         if (alarmMgr!= null) {
             alarmMgr.cancel(alarmIntent);
