@@ -97,6 +97,7 @@ public class MainActivity extends Activity {
                     Log.w(TAG, "FAIL !! file delete NOT ok.");
                 }
             }
+            f.createNewFile();
 
             java.lang.Process process = Runtime.getRuntime().exec(cmds01 + logFilePath);
             Log.w(TAG, "logFileCreated(), process: " + process.toString() +
