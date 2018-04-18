@@ -57,7 +57,9 @@ public class SampleSchedulingService extends IntentService {
         // Try to connect to the Google homepage and download content.
         try {
             result = loadFromNetwork(urlString);
-        } catch (IOException e) {
+        }
+        catch (IOException e)
+        {
             Log.i(TAG, getString(R.string.connection_error));
         }
     
