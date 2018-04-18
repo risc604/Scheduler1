@@ -5,10 +5,12 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Environment;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -26,6 +28,8 @@ public class SampleSchedulingService extends IntentService {
     private static final String TAG1 = SampleSchedulingService.class.getSimpleName();
     public SampleSchedulingService() {
         super("SchedulingService");
+        //logSFileCreated();
+        Log.w(TAG1, "SampleSchedulingService(), ");
     }
     
     public static final String TAG = "Scheduling Demo";
@@ -86,7 +90,8 @@ public class SampleSchedulingService extends IntentService {
         .setContentTitle(getString(R.string.doodle_alert))
         .setStyle(new NotificationCompat.BigTextStyle()
         .bigText(msg))
-        .setContentText(msg);
+        .setContentText(msg)
+        .setVibrate(new long[]{0, 20000, 500, 20000});
 
         mBuilder.setContentIntent(contentIntent);
         mNotificationManager.notify(NOTIFICATION_ID, mBuilder.build());
@@ -151,4 +156,38 @@ public class SampleSchedulingService extends IntentService {
         reader.close();
         return builder.toString();
     }
+
+
+    //private final static String mPID = String.valueOf(android.os.Process.myPid());
+    final static String mPIDs = String.valueOf(android.os.Process.myPid());
+    //final static String cmds01 = "logcat *:v *:w *:e *:d *:i | grep \"(" + mPID + ")\" -f ";
+    final static String cmds011 = "logcat *:v | grep \"(" + mPIDs + ")\" -f ";
+
+    public void logSFileCreated()
+    {
+        try
+        {
+            //final String logFilePath = "/storage/emulated/0/Download/"+"Log_mt24.txt";
+            final String logFilePath =  Environment.getExternalStorageDirectory().getAbsolutePath() +
+                    "/Download/scheduler1s.txt";
+            //final String cmds01 = "logcat *:v | grep \"(" + mPID + ")\" -f ";
+
+            File f = new File(logFilePath);
+            if (f.exists() && !f.isDirectory()) {
+                if (!f.delete()) {
+                    Log.w(TAG, "FAIL !! file delete NOT ok.");
+                }
+            }
+
+            java.lang.Process process = Runtime.getRuntime().exec(cmds011 + logFilePath);
+            Log.w(TAG, "logFileCreated(), process: " + process.toString() +
+                    ", path: " + logFilePath + ", f.exists: " + f.exists());
+        }
+        catch(IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+
 }

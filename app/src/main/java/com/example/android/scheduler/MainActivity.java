@@ -16,14 +16,25 @@
 
 package com.example.android.scheduler;
 
+import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import java.io.File;
+import java.io.IOException;
+import java.nio.file.FileSystemException;
+import java.util.Arrays;
 
 
 /**
@@ -43,9 +54,49 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        if (Build.VERSION.SDK_INT > 22)
+            marshmallowPermission();
+
         logFileCreated();
         Log.w(TAG, "onCreate(), ");
     }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           @NonNull String[] permissions,
+                                           @NonNull int[] grantResults) {
+        Log.i(TAG, "onRequestPermissionsResult()...");
+
+        int grantTotal = 0;
+        Log.w(TAG, "permissions: " + Arrays.toString(permissions) +
+                ", grantResults: " + Arrays.toString(grantResults));
+
+        for (int i = 0; i < grantResults.length; i++) {
+            grantTotal += grantResults[i];
+        }
+        Log.w(TAG, "grantTotal: " + grantTotal);
+
+        if (grantTotal < 0) {
+            marshmallowPermission();
+        } else {
+            switch (requestCode) {
+                case 1:
+                    if ((grantResults.length > 0) &&
+                            (grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
+                        //initAction();
+                    } else {
+                        Log.d(TAG, "onRequestPermissionsResult(), Permission denied.");
+                        Toast.makeText(getApplicationContext(), "Permission denied",
+                        //Toast.makeText(getApplicationContext(), getString(R.string.tas_permission_denied),
+                                Toast.LENGTH_LONG).show();
+                        finish();
+                    }
+                    break;
+            }
+        }
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -71,6 +122,41 @@ public class MainActivity extends Activity {
         return false;
     }
 
+    private boolean marshmallowPermission()
+    {
+        Log.i(TAG, "marshmallowPermission() ...");
+
+        int storagePermission = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE);
+        //int blePermission = ContextCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_ADMIN);
+        int sysPermissionState = PackageManager.PERMISSION_GRANTED;
+        //Log.d(TAG,  "blePermission: " + blePermission +
+        //        ", storagePermission: " + storagePermission +
+        //        ", sysPermissionState: " + sysPermissionState);
+
+        if (storagePermission != sysPermissionState)
+        {
+            if (!ActivityCompat.shouldShowRequestPermissionRationale(this,
+                    Manifest.permission.BLUETOOTH_ADMIN))
+            {
+                ActivityCompat.requestPermissions(this,
+                        new String[]{   Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                                Manifest.permission.READ_EXTERNAL_STORAGE
+                        },  1);
+                ////Toast.makeText(this, "Please give App those permission To Run ...", Toast.LENGTH_LONG).show();
+                Log.d(TAG, " Error !! PERMISSION_DENIED ");
+                return false;
+            }
+            else
+                return true;
+        }
+        else
+        {
+            Log.d(TAG, " PERMISSION_GRANTED ");
+            return true;
+        }
+    }
+
+
     //private final static String mPID = String.valueOf(android.os.Process.myPid());
     final static String mPID = String.valueOf(android.os.Process.myPid());
     //final static String cmds01 = "logcat *:v *:w *:e *:d *:i | grep \"(" + mPID + ")\" -f ";
@@ -83,27 +169,25 @@ public class MainActivity extends Activity {
             //final String logFilePath = "/storage/emulated/0/Download/"+"Log_mt24.txt";
             final String logFilePath =  Environment.getExternalStorageDirectory().getAbsolutePath() +
                     "/Download/scheduler1.txt";
-            final String cmds00 = "logcat -d -f ";
-            //final String cmds01 = "logcat *:e *:i | grep \"(" + mPID + ")\"";
+            //final String cmds01 = "logcat *:v | grep \"(" + mPID + ")\" -f ";
 
-            //String mPID = String.valueOf(android.os.Process.myPid());
-            //String cmds01 = "logcat *:e *:i | grep \"(" + mPID + ")\"";
-
+            boolean state = false;
             File f = new File(logFilePath);
-            if (f.exists() && !f.isDirectory())
-            {
-                if (!f.delete())
-                {
-                    Log.w(TAG, "FAIL !! file delete NOT ok.");
+                if (f.exists() && !f.isDirectory()) {
+                    if (!f.delete()) {
+                        Log.w(TAG, "FAIL !! file delete NOT ok.");
+                    }
+                    else
+                    {
+                        state = f.createNewFile();
+                    }
                 }
-            }
-            f.createNewFile();
 
             java.lang.Process process = Runtime.getRuntime().exec(cmds01 + logFilePath);
             Log.w(TAG, "logFileCreated(), process: " + process.toString() +
-                    ", path: " + logFilePath);
+                    ", path: " + logFilePath + ", f.exists: " + state);
         }
-        catch(Exception e)
+        catch(IOException e)
         {
             e.printStackTrace();
         }
