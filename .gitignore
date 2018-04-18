@@ -146,3 +146,15 @@ app/build/intermediates/transforms/dexMerger/debug/139/classes.dex
 app/build/intermediates/transforms/dexMerger/debug/140/classes.dex
 app/build/intermediates/transforms/dexMerger/debug/141/classes.dex
 app/build/intermediates/transforms/dexMerger/debug/142/classes.dex
+.gradle/4.6/javaCompile/taskHistory.bin
+.gradle/4.6/javaCompile/taskJars.bin
+.idea/libraries/Gradle__android_arch_core_runtime_1_1_0.xml
+.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_0.xml
+.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_0.xml
+.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_0.xml
+.idea/libraries/Gradle__com_android_support_animated_vector_drawable_27_1_1.xml
+.idea/libraries/Gradle__com_android_support_appcompat_v7_27_1_1.xml
+.idea/libraries/Gradle__com_android_support_support_compat_27_1_1.xml
+.idea/libraries/Gradle__com_android_support_support_core_ui_27_1_1.xml
+.idea/libraries/Gradle__com_android_support_support_core_utils_27_1_1.xml
+.idea/libraries/Gradle__com_android_support_support_fragment_27_1_1.xml
