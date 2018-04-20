@@ -2,3 +2,5 @@
 app/build/
 .gradle/
 .idea/
+app.iml
+local.properties
