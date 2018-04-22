@@ -24,7 +24,7 @@ public class SampleAlarmReceiver extends WakefulBroadcastReceiver {
   
     @Override
     public void onReceive(Context context, Intent intent) {
-        Log.w(TAG, "onReceive(), ");
+        Log.w(TAG, "onReceive(), WakefulBroadcastReceiver");
         // BEGIN_INCLUDE(alarm_onreceive)
         /* 
          * If your receiver intent includes extras that need to be passed along to the
@@ -55,7 +55,7 @@ public class SampleAlarmReceiver extends WakefulBroadcastReceiver {
      * @param context
      */
     public void setAlarm(Context context) {
-        Log.w(TAG, " setAlarm(), ");
+        Log.w(TAG, " setAlarm(), WakefulBroadcastReceiver");
         alarmMgr = (AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
         Intent intent = new Intent(context, SampleAlarmReceiver.class);
         alarmIntent = PendingIntent.getBroadcast(context, 0, intent, 0);
@@ -121,7 +121,7 @@ public class SampleAlarmReceiver extends WakefulBroadcastReceiver {
      */
     // BEGIN_INCLUDE(cancel_alarm)
     public void cancelAlarm(Context context) {
-        Log.w(TAG, " cancelAlarm(), ");
+        Log.w(TAG, " cancelAlarm(), WakefulBroadcastReceiver");
         // If the alarm has been set, cancel it.
         if (alarmMgr!= null) {
             alarmMgr.cancel(alarmIntent);
